@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Episodes</h1>
+
+<% @episodes.each do |episode| %>
+  <div><%= link_to episode.name, episode %></div>
+<% end %>
+
+<br>
+
+<%= link_to 'New Episode', new_episode_path %>

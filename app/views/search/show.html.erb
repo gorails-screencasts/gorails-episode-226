@@ -1,0 +1,11 @@
+<h3>We couldn't find your episode</h3>
+
+<% if @episodes.any? %>
+  <p>Here are some related episodes that you might like</p>
+
+  <% @episodes.each do |episode| %>
+    <div><%= link_to episode.name, episode %></div>
+  <% end %>
+<% else %>
+  <p><%= link_to "Check out all our episodes", episodes_path %></p>
+<% end %>
